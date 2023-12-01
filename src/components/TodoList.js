@@ -2,11 +2,11 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-const TodoList = ({ todos, handleDelete }) => {
+const TodoList = ({ todos, handleDelete, handleUpdate }) => {
   return (
     <div>
       {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} handleDelete={handleDelete} />
+        <TodoItem key={todo.id} todo={todo} handleDelete={handleDelete} handleUpdate={handleUpdate} />
       ))}
     </div>
   );

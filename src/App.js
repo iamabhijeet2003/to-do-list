@@ -1,8 +1,9 @@
-import './App.css';
+// App.js
 import React, { useState } from 'react';
 import TodoList from './components/TodoList';
+import './App.css';
 
-function App() {
+const App = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
@@ -22,19 +23,30 @@ function App() {
     setTodos(updatedTodos);
   };
 
+  const handleUpdate = (id, updatedText) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, text: updatedText };
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
 
   return (
+    <div className="container">
+    <h1>To-Do List</h1>
     <div>
-      <h1>To-Do List</h1>
       <input
         type="text"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
       <button onClick={handleAddTodo}>Add</button>
-      <TodoList todos={todos} handleDelete={handleDelete} />
     </div>
+    <TodoList todos={todos} handleDelete={handleDelete} handleUpdate={handleUpdate} />
+  </div>
   );
-}
+};
 
 export default App;
