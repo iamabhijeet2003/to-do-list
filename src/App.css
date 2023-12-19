@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+body{
+  
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Todo item styles */
+.todo-item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  
+  background-color: #0093E9;
+  background-image: linear-gradient(269deg, #0093E9 0%, #80D0C7 100%);
+
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Animation - corner github logo */
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes octocat-wave {
+  0% {
+      transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+
+  20% {
+      transform: rotate(-25deg);
+  }
+
+  40% {
+      transform: rotate(10deg);
+  }
+
+  60% {
+      transform: rotate(-25deg);
+  }
+
+  80% {
+      transform: rotate(10deg);
+  }
+
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+      animation: none;
+  }
+
+  .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
   }
 }
