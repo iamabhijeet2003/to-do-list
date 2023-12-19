@@ -1,0 +1,62 @@
+body{
+  
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  
+}
+
+/* Todo item styles */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  
+  background-color: #0093E9;
+  background-image: linear-gradient(269deg, #0093E9 0%, #80D0C7 100%);
+
+}
+
+
+/* Animation - corner github logo */
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  20% {
+      transform: rotate(-25deg);
+  }
+
+  40% {
+      transform: rotate(10deg);
+  }
+
+  60% {
+      transform: rotate(-25deg);
+  }
+
+  80% {
+      transform: rotate(10deg);
+  }
+
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+      animation: none;
+  }
+
+  .github-corner .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+  }
+}
